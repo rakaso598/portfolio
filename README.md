@@ -7,7 +7,7 @@
 
 이 포트폴리오 웹사이트는 GitHub Pages를 통해 자동으로 배포됩니다.
 
-* **배포 주소:** [https://rakaso598.github.io/rakaso598-portfolio/](https://rakaso598.github.io/rakaso598-portfolio/) (위 링크를 통해 접속하실 수 있습니다.)
+* **배포 주소:** [https://rakaso598.github.io/portfolio/](https://rakaso598.github.io/portfolio/) (위 링크를 통해 접속하실 수 있습니다.)
 * 배포 상태는 상단의 배지 [![GitHub Pages](https://github.com/rakaso598/rakaso598.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/rakaso598/rakaso598.github.io/actions/workflows/pages/pages-build-deployment) 를 통해 확인하실 수 있습니다.
 
 ### 🛠️ 기술 스택
