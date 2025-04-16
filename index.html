@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,20 +12,22 @@
             font-family: 'Noto Sans KR', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f8fa; /* 더 밝고 산뜻한 배경 */
+            background-color: #f4f8fa;
             color: #333;
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
         }
+
         .container {
             max-width: 960px;
-            margin: 80px auto; /* 좀 더 여유로운 마진 */
-            padding: 50px; /* 좀 더 여유로운 패딩 */
+            margin: 80px auto;
+            padding: 50px;
             background-color: #fff;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* 은은하고 넓은 그림자 */
-            border-radius: 16px; /* 더 둥근 모서리 */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+            border-radius: 16px;
         }
+
         header {
             text-align: center;
             padding-bottom: 50px;
@@ -32,18 +35,21 @@
             margin-bottom: 50px;
             animation: fadeInDown 1s ease-out;
         }
+
         @keyframes fadeInDown {
             from {
                 opacity: 0;
                 transform: translateY(-30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         header img {
-            width: 140px; /* 이미지 크기 약간 증가 */
+            width: 140px;
             height: 140px;
             border-radius: 50%;
             object-fit: cover;
@@ -51,32 +57,38 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
         }
+
         header img:hover {
             transform: scale(1.08);
         }
+
         header h1 {
-            font-size: 3em; /* 폰트 크기 증가 */
+            font-size: 3em;
             margin-bottom: 10px;
-            color: #2c3e50; /* 깊이 있는 색상 */
+            color: #2c3e50;
         }
+
         header p {
-            font-size: 1.3em; /* 폰트 크기 증가 */
-            color: #7f8c8d; /* 부드러운 색상 */
+            font-size: 1.3em;
+            color: #7f8c8d;
         }
+
         .section-title {
-            font-size: 2.6em; /* 폰트 크기 증가 */
-            color: #34495e; /* 강조 색상 */
-            border-bottom: 4px solid #3498db; /* 활기찬 포인트 색상 */
+            font-size: 2.6em;
+            color: #34495e;
+            border-bottom: 4px solid #3498db;
             padding-bottom: 18px;
             margin-bottom: 40px;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
+
         .section-title.show {
             opacity: 1;
             transform: translateY(0);
         }
+
         .project {
             margin-bottom: 50px;
             padding: 35px;
@@ -87,34 +99,40 @@
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s; /* 약간의 딜레이 */
+            transition: opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s;
         }
+
         .project:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
         }
+
         .project.show {
             opacity: 1;
             transform: translateY(0);
         }
+
         .project h3 {
-            font-size: 1.8em; /* 폰트 크기 증가 */
+            font-size: 1.8em;
             color: #2c3e50;
             margin-bottom: 18px;
         }
+
         .project p {
             color: #7f8c8d;
             margin-bottom: 25px;
             line-height: 1.8;
         }
+
         .project .skills {
             font-size: 1.1em;
             color: #95a5a6;
         }
+
         .project .skills span {
             display: inline-block;
-            background-color: #e7f5ff; /* 더 밝은 태그 배경 */
-            color: #3498db; /* 활기찬 태그 색상 */
+            background-color: #e7f5ff;
+            color: #3498db;
             padding: 10px 16px;
             border-radius: 10px;
             margin-right: 10px;
@@ -122,10 +140,12 @@
             font-weight: 500;
             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
+
         .project .skills span:hover {
             background-color: #3498db;
             color: #fff;
         }
+
         .contact-info p {
             margin-bottom: 20px;
             font-size: 1.2em;
@@ -134,19 +154,23 @@
             transform: translateY(20px);
             transition: opacity 0.5s ease-out 0.3s, transform 0.5s ease-out 0.3s;
         }
+
         .contact-info p.show {
             opacity: 1;
             transform: translateY(0);
         }
+
         .contact-info a {
             color: #3498db;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease-in-out;
         }
+
         .contact-info a:hover {
             color: #2980b9;
         }
+
         footer {
             text-align: center;
             padding-top: 50px;
@@ -158,10 +182,12 @@
             transform: translateY(20px);
             transition: opacity 0.5s ease-out 0.4s, transform 0.5s ease-out 0.4s;
         }
+
         footer.show {
             opacity: 1;
             transform: translateY(0);
         }
+
         #skills ul {
             list-style: none;
             padding: 0;
@@ -172,41 +198,51 @@
             transform: translateY(20px);
             transition: opacity 0.5s ease-out 0.2s, transform 0.5s ease-out 0.2s;
         }
+
         #skills ul.show {
             opacity: 1;
             transform: translateY(0);
         }
+
         #skills ul li {
-            background-color: #e7f5ff; /* 더 밝은 배경 */
-            color: #3498db; /* 활기찬 색상 */
+            background-color: #e7f5ff;
+            color: #3498db;
             padding: 10px 18px;
             border-radius: 10px;
             font-size: 1.1em;
             font-weight: 500;
             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
+
         #skills ul li:hover {
             background-color: #3498db;
             color: #fff;
             transform: scale(1.05);
         }
-        /* 부드러운 스크롤 */
+
         html {
             scroll-behavior: smooth;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <img src="profile-image.png" alt="프로필 사진">
-            <h1>[당신의 이름]</h1>
-            <p>[당신의 직업 또는 간단한 소개]</p>
+            <h1>rakaso598</h1>
+            <p>주니어 풀스택 개발자</p>
         </header>
 
         <section id="about">
             <h2 class="section-title">소개</h2>
-            <p>[당신에 대한 자세한 소개를 작성하세요. 당신의 경험, 강점, 열정, 그리고 이 분야에 대한 당신의 비전을 보여주는 내용을 포함하면 좋습니다. 간결하면서도 임팩트 있게 자신을 어필해 보세요.]</p>
+            <p>
+            <h3>코딩은 개발자가 추구하는 가치를 디지털 세계에 구현하는 일이라고 생각합니다.</h3><br>
+            생각을 글로, 영감을 그림으로 표현하듯, 코딩 또한 개발자가 추구하는 가치를 디지털 세계에 모델링하고 구현하는 과정이라고 생각합니다.<br><br>
+            저는 사람들이 필요로 하는 유용한 도구나 사용자들에게 도움을 주는 어플리케이션을 만드는 것을 목표로 코딩을 하고 있습니다.<br>
+            이러한 생각을 바탕으로, 컴퓨팅 기술과 어플리케이션 구현을 통해 실제 삶에서의 의미 있는 변화를 만들어내고자 합니다.<br><br>
+            Java와 Spring Boot에 능숙하며, 프론트엔드 웹 표준 기술에도 익숙합니다.<br>
+            AI를 활용하여 학습 효율을 높였으며, 프로젝트의 진척 속도와 퀄리티를 향상하고 있습니다.</p>
         </section>
 
         <section id="projects">
@@ -214,7 +250,8 @@
 
             <div class="project">
                 <h3>[프로젝트 1 이름]</h3>
-                <p>[프로젝트 1에 대한 설명입니다. 이 프로젝트를 통해 무엇을 배우고 성취했는지, 어떤 기술적 도전을 극복했는지 등을 구체적으로 작성해 주세요. 가능하다면 프로젝트의 주요 기능이나 데모 영상/이미지를 첨부하여 시각적인 이해를 도울 수 있습니다.]</p>
+                <p>[프로젝트 1에 대한 설명입니다. 이 프로젝트를 통해 무엇을 배우고 성취했는지, 어떤 기술적 도전을 극복했는지 등을 구체적으로 작성해 주세요. 가능하다면 프로젝트의 주요 기능이나
+                    데모 영상/이미지를 첨부하여 시각적인 이해를 도울 수 있습니다.]</p>
                 <p class="skills">
                     <span>HTML5</span>
                     <span>CSS3</span>
@@ -236,48 +273,50 @@
                 </p>
             </div>
 
-            </section>
+        </section>
 
         <section id="skills">
             <h2 class="section-title">기술 스택</h2>
-            <p>[당신이 능숙하게 다룰 수 있는 기술들을 분류별로 (예: 프론트엔드, 백엔드, 데이터베이스, DevOps 등) 나누어 강조하고, 각 기술에 대한 당신의 숙련도를 간략하게 언급할 수도 있습니다.]</p>
+
             <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React</li>
-                <li>Vue.js</li>
-                <li>Angular</li>
+                <li>Java</li>
+                <li>Spring Boot</li>
                 <li>Node.js</li>
                 <li>Express</li>
-                <li>Python</li>
-                <li>Django</li>
-                <li>Flask</li>
-                <li>SQL (MySQL, PostgreSQL)</li>
-                <li>NoSQL (MongoDB)</li>
-                <li>Git & GitHub</li>
-                <li>Docker</li>
-                <li>AWS / Azure / GCP</li>
-                </ul>
+                <li>React</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PostgreSQL</li>
+                <li>OracleDB</li>
+                <li>MySQL</li>
+                <li>Vercel</li>
+                <li>Vite</li>
+                <li>Prisma</li>
+                <li>Mongoose</li>
+                <li>MongoDB</li>
+                <li>Netlify</li>
+            </ul>
         </section>
 
         <section id="contact">
             <h2 class="section-title">연락처</h2>
             <div class="contact-info">
-                <p><strong>이메일:</strong> <a href="mailto:[당신의 이메일]">[당신의 이메일]</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/[당신의 깃허브 사용자명]" target="_blank">github.com/[당신의 깃허브 사용자명]</a></p>
-                <p><strong>LinkedIn:</strong> <a href="[당신의 LinkedIn 프로필 링크]" target="_blank">[당신의 LinkedIn 프로필]</a> (선택 사항)</p>
-                <p><strong>Blog:</strong> <a href="[당신의 블로그 링크]" target="_blank">[당신의 블로그]</a> (선택 사항)</p>
-                </div>
+                <p><strong>이메일:</strong> <a href="mailto:namul9416@gmail.com">namul9416@gmail.com</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/rakaso598"
+                        target="_blank">github.com/rakaso598</a></p>
+                <p><strong>Blog:</strong> <a href="https://rexondex.tistory.com/" target="_blank">rexondex's blog</a>
+                </p>
+            </div>
         </section>
 
         <footer>
-            <p>© [현재 년도] [당신의 이름]. All rights reserved.</p>
+            <p>© 2025 rakaso598. All rights reserved.</p>
         </footer>
     </div>
 
     <script>
-        // 부드러운 스크롤
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -288,7 +327,7 @@
             });
         });
 
-        // Intersection Observer를 활용한 요소 등장 애니메이션
+
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -300,10 +339,11 @@
             threshold: 0.1
         });
 
-        // 각 섹션과 요소에 Observer 적용
+
         document.querySelectorAll('.section-title, .project, #skills ul, .contact-info p, footer').forEach(element => {
             observer.observe(element);
         });
     </script>
 </body>
+
 </html>
