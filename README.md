@@ -7,7 +7,7 @@
 
 이 포트폴리오 웹사이트는 GitHub Pages를 통해 자동으로 배포됩니다.
 
-* **배포 주소:** [https://rakaso598.github.io/](https://rakaso598.github.io/) (위 링크를 통해 접속하실 수 있습니다.)
+* **배포 주소:** [https://rakaso598.github.io/rakaso598-portfolio/](https://rakaso598.github.io/rakaso598-portfolio/) (위 링크를 통해 접속하실 수 있습니다.)
 * 배포 상태는 상단의 배지 [![GitHub Pages](https://github.com/rakaso598/rakaso598.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/rakaso598/rakaso598.github.io/actions/workflows/pages/pages-build-deployment) 를 통해 확인하실 수 있습니다.
 
 ### 🛠️ 기술 스택
@@ -17,14 +17,6 @@
 * HTML: 웹사이트의 구조를 정의합니다.
 * CSS: 웹사이트의 스타일링 및 레이아웃을 담당합니다.
 * JavaScript: 간단한 동적 기능 및 사용자 경험 향상을 위해 사용되었습니다.
-
-### 📂 파일 구조
-
-.
-├── index.html          # 메인 HTML 파일
-├── profile-image.png   # 프로필 이미지
-└── README.md
-
 
 ### ✍️ 내용 수정 방법
 
