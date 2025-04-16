@@ -230,7 +230,7 @@
             z-index: 1000;
             background-color: #ffffff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-            padding: 3px 20px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -260,7 +260,6 @@
         .gnb .menu a:hover {
             color: #2c3e50;
         }
-
 
         @media (max-width: 600px) {
             .gnb {
@@ -298,12 +297,13 @@
         <section id="about">
             <h2 class="section-title">소개</h2>
             <p>
-            <h3>코딩은 개발자가 추구하는 가치를 디지털 세계에 구현하는 일이라고 생각합니다.</h3><br>
-            생각을 글로, 영감을 그림으로 표현하듯, 코딩 또한 개발자가 추구하는 가치를 디지털 세계에 모델링하고 구현하는 과정이라고 생각합니다.<br><br>
-            저는 사람들이 필요로 하는 유용한 도구나 사용자들에게 도움을 주는 어플리케이션을 만드는 것을 목표로 코딩을 하고 있습니다.<br>
-            이러한 생각을 바탕으로, 컴퓨팅 기술과 어플리케이션 구현을 통해 실제 삶에서의 의미 있는 변화를 만들어내고자 합니다.<br><br>
-            Java와 Spring Boot에 능숙하며, 프론트엔드 웹 표준 기술에도 익숙합니다.<br>
-            AI를 활용하여 학습 효율을 높였으며, 프로젝트의 진척 속도와 퀄리티를 향상하고 있습니다.</p>
+                <h3>코딩은 개발자가 추구하는 가치를 디지털 세계에 구현하는 일이라고 생각합니다.</h3><br>
+                생각을 글로, 영감을 그림으로 표현하듯, 코딩 또한 개발자가 추구하는 가치를 디지털 세계에 모델링하고 구현하는 과정이라고 생각합니다.<br><br>
+                저는 사람들이 필요로 하는 유용한 도구나 사용자들에게 도움을 주는 어플리케이션을 만드는 것을 목표로 코딩을 하고 있습니다.<br>
+                이러한 생각을 바탕으로, 컴퓨팅 기술과 어플리케이션 구현을 통해 실제 삶에서의 의미 있는 변화를 만들어내고자 합니다.<br><br>
+                Java와 Spring Boot에 능숙하며, 프론트엔드 웹 표준 기술에도 익숙합니다.<br>
+                AI를 활용하여 학습 효율을 높였으며, 프로젝트의 진척 속도와 퀄리티를 향상하고 있습니다.
+            </p>
         </section>
 
         <section id="projects">
@@ -364,8 +364,7 @@
             <h2 class="section-title">연락처</h2>
             <div class="contact-info">
                 <p><strong>이메일:</strong> <a href="mailto:namul9416@gmail.com">namul9416@gmail.com</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/rakaso598"
-                        target="_blank">github.com/rakaso598</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/rakaso598" target="_blank">github.com/rakaso598</a></p>
                 <p><strong>Blog:</strong> <a href="https://rexondex.tistory.com/" target="_blank">rexondex's blog</a>
                 </p>
             </div>
@@ -377,7 +376,6 @@
     </div>
 
     <script>
-
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -387,7 +385,6 @@
                 });
             });
         });
-
 
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -399,7 +396,6 @@
         }, {
             threshold: 0.1
         });
-
 
         document.querySelectorAll('.section-title, .project, #skills ul, .contact-info p, footer').forEach(element => {
             observer.observe(element);
