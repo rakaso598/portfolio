@@ -185,10 +185,14 @@
         /* 이미지 컨테이너 스타일 */
         .image-container {
             display: flex;
-            flex-wrap: wrap; /* 화면 너비에 따라 자동으로 줄바꿈 */
-            gap: 20px; /* 이미지와 설명 사이 간격 조절 */
-            justify-content: center; /* 가운데 정렬 */
-            margin-top: 20px; /* 다른 요소와의 간격 */
+            flex-wrap: wrap;
+            /* 화면 너비에 따라 자동으로 줄바꿈 */
+            gap: 20px;
+            /* 이미지와 설명 사이 간격 조절 */
+            justify-content: center;
+            /* 가운데 정렬 */
+            margin-top: 20px;
+            /* 다른 요소와의 간격 */
         }
 
         /* 개별 이미지와 설명 래퍼 */
@@ -200,13 +204,20 @@
 
         /* 작은 이미지 스타일 */
         .image-item img {
-            width: 120px; /* 원하는 작은 너비 */
-            height: auto; /* 비율 유지 */
-            object-fit: contain; /* 이미지 비율 유지하며 지정된 영역 안에 맞춤 */
-            border: 1px solid #ddd; /* 선택적으로 테두리 추가 */
-            border-radius: 5px; /* 선택적으로 둥근 테두리 */
-            cursor: pointer; /* 클릭 가능한 커서 표시 */
-            margin-bottom: 5px; /* 이미지와 설명 사이 간격 */
+            width: 120px;
+            /* 원하는 작은 너비 */
+            height: auto;
+            /* 비율 유지 */
+            object-fit: contain;
+            /* 이미지 비율 유지하며 지정된 영역 안에 맞춤 */
+            border: 1px solid #ddd;
+            /* 선택적으로 테두리 추가 */
+            border-radius: 5px;
+            /* 선택적으로 둥근 테두리 */
+            cursor: pointer;
+            /* 클릭 가능한 커서 표시 */
+            margin-bottom: 5px;
+            /* 이미지와 설명 사이 간격 */
         }
 
         /* 이미지 설명 스타일 */
@@ -214,20 +225,26 @@
             font-size: 0.9rem;
             color: #555;
             text-align: center;
-            word-break: break-word; /* 긴 단어 줄바꿈 */
-            max-width: 120px; /* 이미지 너비에 맞춰 설명 최대 너비 제한 */
+            word-break: break-word;
+            /* 긴 단어 줄바꿈 */
+            max-width: 120px;
+            /* 이미지 너비에 맞춰 설명 최대 너비 제한 */
         }
 
         /* 모달 스타일 */
         .modal {
-            display: none; /* 초기에는 숨김 */
-            position: fixed; /* 화면 전체를 덮도록 고정 */
+            display: none;
+            /* 초기에는 숨김 */
+            position: fixed;
+            /* 화면 전체를 덮도록 고정 */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.8); /* 어두운 배경 */
-            z-index: 1001; /* 다른 요소보다 위에 표시 */
+            background-color: rgba(0, 0, 0, 0.8);
+            /* 어두운 배경 */
+            z-index: 1001;
+            /* 다른 요소보다 위에 표시 */
             justify-content: center;
             align-items: center;
         }
@@ -236,14 +253,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            max-width: 90%; /* 모달 내용 최대 너비 */
-            max-height: 90%; /* 모달 내용 최대 높이 */
+            max-width: 90%;
+            /* 모달 내용 최대 너비 */
+            max-height: 90%;
+            /* 모달 내용 최대 높이 */
         }
 
         .modal-image {
-            max-width: 100%; /* 이미지 최대 너비 (모달 기준) */
-            max-height: 100%; /* 이미지 최대 높이 (모달 기준) */
-            object-fit: contain; /* 이미지 비율 유지하며 모달에 맞춤 */
+            max-width: 100%;
+            /* 이미지 최대 너비 (모달 기준) */
+            max-height: 100%;
+            /* 이미지 최대 높이 (모달 기준) */
+            object-fit: contain;
+            /* 이미지 비율 유지하며 모달에 맞춤 */
         }
 
         .modal-close-button {
@@ -286,7 +308,9 @@
                     href="https://www.notion.so/2-1db9f2bb6153807bb01ef93d9a64c400?pvs=4">2팀 팀프로젝트 공부의 숲 노션
                     바로가기</a>
             </p>
-
+            <p><strong>🎬 웹사이트 바로가기:</strong> <a href="https://6-studyforest-phytoncide-fs.netlify.app/"
+                    target="_blank">6-studyforest-phytoncide-fs.netlify.app</a></p>
+            <br>
             <h2>🛠️ 주요 기술 스택:</h2>
             <ul>
                 <li><strong>Frontend:</strong> HTML, CSS, JavaScript, React, React Router, Vite</li>
@@ -294,7 +318,7 @@
                 <li><strong>Deploy:</strong> Netlify</li>
                 <li><strong>Tools:</strong> Git, GitHub, npm, Nodemon</li>
             </ul>
-
+            <br>
             <h2>✨ 주요 기능:</h2>
             <ul>
                 <li>습관 관리: 매일 반복할 습관 설정 및 체크 기능</li>
@@ -304,7 +328,7 @@
                 <li>UX 개선: 로딩 바 적용, Hover/Touch 시 인터랙션 효과</li>
                 <li>검색 및 정렬: 스터디 목록 검색 (키워드), 포인트/최신순 정렬, 페이지네이션</li>
             </ul>
-
+            <br>
             <h2>✅ 성취 및 배운 점:</h2>
             <ul>
                 <li>React 기반의 사용자 인터페이스 개발 능력 향상: 컴포넌트 기반 설계, 상태 관리, 라우팅 학습</li>
@@ -315,15 +339,14 @@
                 <li>UX/UI 개선을 위한 고민: 사용자 편의성을 고려한 기능 추가 및 인터랙션 적용</li>
                 <li>데이터베이스 성능 최적화 경험: Prisma Raw Query를 활용한 특정 검색 기능 개선</li>
             </ul>
-
+            <br>
             <h2>🚧 기술적 도전 및 극복:</h2>
             <ul>
                 <li>Prisma Raw Query를 이용한 검색 기능 구현: 기존 ORM 방식의 한계를 극복하고 SQL 쿼리 수준에서 검색 로직을 구현하여 성능 향상 및 검색 정확도 개선</li>
                 <li>공통 컴포넌트 및 로직 재사용성 확보: 비밀번호 검증 모달 등 공통으로 사용되는 UI 요소 및 로직을 효율적으로 관리하고 재사용하여 개발 효율성 증대</li>
                 <li>프론트엔드-백엔드 데이터 연동 과정에서의 이해도 증진: API 호출 및 응답 처리, 데이터 유효성 검사 등 통합적인 개발 프로세스 경험</li>
             </ul>
-            <h2><strong>🎬 웹사이트 바로가기:</strong> <a href="https://6-studyforest-phytoncide-fs.netlify.app/"
-                    target="_blank">6-studyforest-phytoncide-fs.netlify.app</a></h2>
+            <br>
             <h2><strong>🖼️ 주요 기능 시연:</strong></h2>
             <div class="image-container">
                 <div class="image-item">
