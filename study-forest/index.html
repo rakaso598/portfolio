@@ -181,6 +181,86 @@
         .feature-list li {
             padding: 5px 0;
         }
+
+        /* 이미지 컨테이너 스타일 */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap; /* 화면 너비에 따라 자동으로 줄바꿈 */
+            gap: 20px; /* 이미지와 설명 사이 간격 조절 */
+            justify-content: center; /* 가운데 정렬 */
+            margin-top: 20px; /* 다른 요소와의 간격 */
+        }
+
+        /* 개별 이미지와 설명 래퍼 */
+        .image-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 작은 이미지 스타일 */
+        .image-item img {
+            width: 120px; /* 원하는 작은 너비 */
+            height: auto; /* 비율 유지 */
+            object-fit: contain; /* 이미지 비율 유지하며 지정된 영역 안에 맞춤 */
+            border: 1px solid #ddd; /* 선택적으로 테두리 추가 */
+            border-radius: 5px; /* 선택적으로 둥근 테두리 */
+            cursor: pointer; /* 클릭 가능한 커서 표시 */
+            margin-bottom: 5px; /* 이미지와 설명 사이 간격 */
+        }
+
+        /* 이미지 설명 스타일 */
+        .image-caption {
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+            word-break: break-word; /* 긴 단어 줄바꿈 */
+            max-width: 120px; /* 이미지 너비에 맞춰 설명 최대 너비 제한 */
+        }
+
+        /* 모달 스타일 */
+        .modal {
+            display: none; /* 초기에는 숨김 */
+            position: fixed; /* 화면 전체를 덮도록 고정 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* 어두운 배경 */
+            z-index: 1001; /* 다른 요소보다 위에 표시 */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 90%; /* 모달 내용 최대 너비 */
+            max-height: 90%; /* 모달 내용 최대 높이 */
+        }
+
+        .modal-image {
+            max-width: 100%; /* 이미지 최대 너비 (모달 기준) */
+            max-height: 100%; /* 이미지 최대 높이 (모달 기준) */
+            object-fit: contain; /* 이미지 비율 유지하며 모달에 맞춤 */
+        }
+
+        .modal-close-button {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-close-button:hover {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -203,7 +283,8 @@
             <p><strong>🗓️ 기간:</strong> 2025년 3월 21일 ~ 2025년 4월 10일</p>
             <p><strong>🧑‍🤝‍🧑 팀원:</strong> 이지수B (팀장), 김홍섭, 이태빈, 안세빈, 임정빈, 최민경, 박민규</p>
             <p><strong>🤝 팀프로젝트 협업 Notion:</strong> <a
-                    href="https://www.notion.so/2-1db9f2bb6153807bb01ef93d9a64c400?pvs=4">2팀 팀프로젝트 공부의 숲 노션 바로가기</a>
+                    href="https://www.notion.so/2-1db9f2bb6153807bb01ef93d9a64c400?pvs=4">2팀 팀프로젝트 공부의 숲 노션
+                    바로가기</a>
             </p>
 
             <h2>🛠️ 주요 기술 스택:</h2>
@@ -242,10 +323,93 @@
                 <li>프론트엔드-백엔드 데이터 연동 과정에서의 이해도 증진: API 호출 및 응답 처리, 데이터 유효성 검사 등 통합적인 개발 프로세스 경험</li>
             </ul>
             <p><strong>🎬 데모:</strong> <a href="https://6-studyforest-phytoncide-fs.netlify.app/"
-                    target="_blank">https://6-studyforest-phytoncide-fs.netlify.app/</a> (실제 웹사이트 링크)</p>
-            <p><strong>🖼️ (이미지 첨부 예정 - 필요시)</strong></p>
+                    target="_blank">6-studyforest-phytoncide-fs.netlify.app</a></p>
+            <p><strong>🖼️ 주요 기능 시연:</strong></p>
+            <div class="image-container">
+                <div class="image-item">
+                    <img src="./image/emoji-picker.png" alt="이모지 피커 라이브러리" data-original="./image/emoji-picker.png">
+                    <p class="image-caption">이모지 피커</p>
+                </div>
+                <div class="image-item">
+                    <img src="./image/hobby-add.png" alt="습관 추가" data-original="./image/hobby-add.png">
+                    <p class="image-caption">습관 추가</p>
+                </div>
+                <div class="image-item">
+                    <img src="./image/hobby-check.png" alt="습관 체크" data-original="./image/hobby-check.png">
+                    <p class="image-caption">습관 체크</p>
+                </div>
+                <div class="image-item">
+                    <img src="./image/hobby-checked.png" alt="습관 체크됨" data-original="./image/hobby-checked.png">
+                    <p class="image-caption">습관 완료</p>
+                </div>
+                <div class="image-item">
+                    <img src="./image/main.png" alt="메인화면" data-original="./image/main.png">
+                    <p class="image-caption">메인 화면</p>
+                </div>
+                <div class="image-item">
+                    <img src="./image/more-card.png" alt="더 많은 게시물 보기" data-original="./image/more-card.png">
+                    <p class="image-caption">더 보기 카드</p>
+                </div>
+                <div class="image-item">
+                    <img src="./image/more-emoji-modal.png" alt="더 많은 이모지 보기"
+                        data-original="./image/more-emoji-modal.png">
+                    <p class="image-caption">이모지 모달</p>
+                </div>
+                <div class="image-item">
+                    <img src="./image/study-detail.png" alt="스터디 상세화면" data-original="./image/study-detail.png">
+                    <p class="image-caption">스터디 상세</p>
+                </div>
+                <div class="image-item">
+                    <img src="./image/study-update.png" alt="스터디 수정하기" data-original="./image/study-update.png">
+                    <p class="image-caption">스터디 수정</p>
+                </div>
+                <div class="image-item">
+                    <img src="./image/timer.png" alt="타이머 화면" data-original="./image/timer.png">
+                    <p class="image-caption">타이머</p>
+                </div>
+                <div class="image-item">
+                    <img src="./image/timer-sudden.png" alt="타이머 10초 이내" data-original="./image/timer-sudden.png">
+                    <p class="image-caption">타이머 임박</p>
+                </div>
+                <div class="image-item">
+                    <img src="./image/toast-modal.png" alt="검증 실패 토스트 모달" data-original="./image/toast-modal.png">
+                    <p class="image-caption">토스트 모달</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div id="imageModal" class="modal" onclick="closeModal(event)">
+        <span class="modal-close-button">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" class="modal-image" src="" alt="원본 이미지">
+        </div>
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.image-container img');
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const closeButton = document.querySelector('.modal-close-button');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                const originalSrc = img.dataset.original;
+                modalImage.src = originalSrc;
+                modal.style.display = 'flex';
+            });
+        });
+
+        function closeModal(event) {
+            if (event.target === modal || event.target === closeButton) {
+                modal.style.display = 'none';
+                modalImage.src = ''; // 모달 닫을 때 이미지 소스 초기화
+            }
+        }
+
+        // 닫기 버튼 클릭 이벤트 (모달 영역 클릭으로도 닫히므로 중복 방지)
+        closeButton.addEventListener('click', closeModal);
+    </script>
 </body>
 
 </html>
