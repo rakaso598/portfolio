@@ -2,73 +2,378 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>팀프로젝트: 공부의 숲</title>
-  <style>
-    .gnb {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background-color: #ffffff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #e1e4e8;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 뼈대</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 
-    .gnb .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #34495e;
-      font-family: 'Roboto', sans-serif;
-    }
+        /* gnb */
+        .gnb {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e1e4e8;
+        }
 
-    .gnb .menu {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
+        .gnb .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #34495e;
+            font-family: 'Roboto', sans-serif;
+        }
 
-    .gnb .menu a {
-      text-decoration: none;
-      font-size: 1rem;
-      color: #5c6f7f;
-      transition: color 0.3s;
-    }
+        .gnb .menu {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
 
-    .gnb .menu a:hover {
-      color: #2c3e50;
-    }
+        .gnb .menu a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #5c6f7f;
+            transition: color 0.3s;
+        }
 
-    @media (max-width: 600px) {
-      .gnb {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+        .gnb .menu a:hover {
+            color: #2c3e50;
+        }
 
-      .gnb .menu {
-        margin-top: 10px;
-      }
-    }
-  </style>
+        @media (max-width: 600px) {
+            .gnb {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .gnb .menu {
+                margin-top: 10px;
+            }
+        }
+
+        /* --- */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #343a40;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #6c757d;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        strong {
+            font-weight: bold;
+            color: #212529;
+        }
+
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-link:hover {
+            background-color: #0056b3;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 5px;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .file-structure {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #e9ecef;
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #212529;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+
+        .feature-list li {
+            padding: 5px 0;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="gnb">
-    <a href="https://rakaso598.github.io/" style="text-decoration: none;">
-      <div class="logo">rakaso598</div>
-    </a>
-    <div class="menu">
-
-      <a href="https://github.com/rakaso598/" target="_blank">GitHub</a>
-      <a href="https://rexondex.tistory.com/" target="_blank">Blog</a>
-      <a href="https://rakaso598.github.io/portfolio/" target="_blank">포트폴리오</a>
-      <a href="https://rexondex.tistory.com/guestbook/" target="_blank">방명록</a>
+    <div class="gnb">
+        <a href="https://rakaso598.github.io/" style="text-decoration: none;">
+            <div class="logo">rakaso598</div>
+        </a>
+        <div class="menu">
+            <a href="https://github.com/rakaso598/" target="_blank">GitHub</a>
+            <a href="https://rexondex.tistory.com/" target="_blank">Blog</a>
+            <a href="https://rakaso598.github.io/portfolio/" target="_blank">포트폴리오</a>
+            <a href="https://rexondex.tistory.com/guestbook/" target="_blank">방명록</a>
+        </div>
     </div>
-  </div>
+    <div class="container">
+        <h1>🌟 <strong>문서 정리에 진심인팀</strong></h1>
+        <p><a href="https://www.notion.so/2-1be5e940de598095a073da7e2f525e98?cookie_sync_completed=true"
+                class="button-link" target="_blank">팀 협업 문서 바로가기</a></p>
+
+        <h2>👥 <strong>팀원 구성</strong></h2>
+        <div class="team-members">
+            <div class="team-member"><strong>이지수B [팀장]</strong><br><img
+                    src="https://avatars.githubusercontent.com/u-88492788?v=4" alt="이지수B"></div>
+            <div class="team-member"><strong>김홍섭</strong><br><img
+                    src="https://avatars.githubusercontent.com/u-70648136?v=4" alt="김홍섭"></div>
+            <div class="team-member"><strong>이태빈</strong><br><img
+                    src="https://avatars.githubusercontent.com/u-124318845?v=4" alt="이태빈"></div>
+            <div class="team-member"><strong>안세빈</strong><br><img
+                    src="https://avatars.githubusercontent.com/u-127944977?v=4" alt="안세빈"></div>
+            <div class="team-member"><strong>임정빈</strong><br><img
+                    src="https://avatars.githubusercontent.com/u-127945035?v=4" alt="임정빈"></div>
+            <div class="team-member"><strong>최민경</strong><br><img
+                    src="https://avatars.githubusercontent.com/u-127945008?v=4" alt="최민경"></div>
+            <div class="team-member"><strong>박민규</strong><br><img
+                    src="https://avatars.githubusercontent.com/u-86788882?v=4" alt="박민규"></div>
+        </div>
+
+        <h2>🚀 <strong>프로젝트 소개: 공부의 숲</strong></h2>
+        <p>습관 형성 및 집중 시간 관리를 돕는 서비스</p>
+        <h3>주요 기능</h3>
+        <ul class="feature-list">
+            <li>습관 형성 및 관리</li>
+            <li>집중 시간에 따른 포인트 지급</li>
+            <li>스터디 그룹 활동 지원</li>
+        </ul>
+        <p><strong>프로젝트 기간:</strong> 2025.03.21 ~ 2025.04.10</p>
+
+        <h2>⚙ <strong>기술 스택</strong></h2>
+        <div>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+                    alt="HTML5"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+                    alt="CSS3"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+                    alt="JavaScript"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white"
+                    alt="React"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white"
+                    alt="React Router"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"
+                    alt="Node.js"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"
+                    alt="Express.js"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"
+                    alt="PostgreSQL"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white"
+                    alt="Prisma"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white"
+                    alt="Netlify"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
+                    alt="Git"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+                    alt="GitHub"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"
+                    alt="npm"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white"
+                    alt="Nodemon"></span>
+            <span class="tech-badge"><img
+                    src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"
+                    alt="Vite"></span>
+        </div>
+
+        <h2>🔨 <strong>팀원별 주요 기능</strong></h2>
+        <h3>이지수B</h3>
+        <ul class="feature-list">
+            <li>스터디 상세 조회 및 삭제</li>
+            <li>공용 비밀번호 검증 모달</li>
+        </ul>
+        <h3>김홍섭</h3>
+        <ul class="feature-list">
+            <li>특정 스터디 수정</li>
+            <li>응원 이모지 추가 및 삭제</li>
+        </ul>
+        <h3>이태빈</h3>
+        <ul class="feature-list">
+            <li>오늘의 집중 시작 및 완료 (타이머, 포인트 지급)</li>
+        </ul>
+        <h3>안세빈</h3>
+        <ul class="feature-list">
+            <li>오늘의 습관 조회 및 생성</li>
+        </ul>
+        <h3>임정빈</h3>
+        <ul class="feature-list">
+            <li>스터디 생성</li>
+            <li>오늘의 집중 페이지 조회</li>
+        </ul>
+        <h3>최민경</h3>
+        <ul class="feature-list">
+            <li>오늘의 습관 수정 및 종료</li>
+            <li>오늘의 습관 체크 및 기록</li>
+        </ul>
+        <h3>박민규</h3>
+        <ul class="feature-list">
+            <li>전체 레이아웃 및 반응형 디자인</li>
+            <li>공통 Header, Footer</li>
+            <li>스터디 목록 조회, 검색, 정렬, 페이지네이션</li>
+            <li>최근 본 스터디 표시</li>
+            <li>로딩 바, 인터랙션 개선</li>
+            <li>Prisma Raw Query 검색 최적화</li>
+        </ul>
+
+        <h2>📁 <strong>파일 구조 (Frontend)</strong></h2>
+        <pre class="file-structure">
+    frontend/
+    ├── src/
+    │   ├── api/
+    │   ├── components/
+    │   ├── contexts/
+    │   ├── hooks/
+    │   ├── layout/
+    │   ├── pages/
+    │   ├── styles/
+    │   ├── utils/
+    │   ├── App.jsx
+    │   └── main.jsx
+    ├── public/
+    │   ├── font/
+    │   ├── images/
+    │   └── _redirects
+    ├── index.html
+    ├── vite.config.js
+    ├── eslint.config.js
+    ├── package.json
+    └── README.md
+        </pre>
+
+        <h2>📁 <strong>파일 구조 (Backend)</strong></h2>
+        <pre class="file-structure">
+    backend/
+    ├── src/
+    │   ├── app.js
+    │   ├── db/
+    │   │   └── prisma/
+    │   │       ├── client.prisma.js
+    │   │       ├── migrations/
+    │   │       └── schema.prisma
+    │   ├── middlewares/
+    │   │   └── errorHandler.module.js
+    │   └── modules/
+    │       ├── healthCheck.module.js
+    │       ├── index.module.js
+    │       └── route/
+    │           ├── focus.module.js
+    │           ├── habits.module.js
+    │           └── studies.module.js
+    ├── package.json
+    ├── package-lock.json
+    └── README.md
+        </pre>
+
+        <h2>🌐 <strong>구현 홈페이지</strong></h2>
+        <p><a href="https://6-studyforest-phytoncide-fs.netlify.app/" class="button-link"
+                target="_blank">https://6-studyforest-phytoncide-fs.netlify.app/</a></p>
+
+        <h2>📝 <strong>프로젝트 회고록</strong></h2>
+        <p style="text-align: left;">
+            저희 팀은 "문서 정리에 진심인 팀"이라는 이름에 걸맞게, 협업 과정과 결과물을 명확하게 정리하고자 노력했습니다.
+            "공부의 숲" 프로젝트를 통해 습관 형성 및 집중이라는 주제를 다루면서, 사용자에게 실질적인 도움을 줄 수 있는 기능을 구현하는 데 집중했습니다.
+            프론트엔드와 백엔드 간의 원활한 통신, 사용자 인터페이스의 직관성, 그리고 안정적인 서비스 배포를 위해 각 팀원이 맡은 역할을 충실히 수행했습니다.
+            특히, 박민규 님의 레이아웃 및 UX 개선 작업은 사용자 경험을 한층 끌어올리는 데 크게 기여했습니다.
+            Prisma Raw Query를 활용한 검색 최적화는 성능 향상에 중요한 역할을 했습니다.
+            팀원 간의 적극적인 소통과 협력을 통해 어려움을 극복하고, 계획된 기간 내에 완성도 높은 결과물을 만들어낼 수 있었습니다.
+            앞으로도 사용자 피드백을 반영하여 지속적으로 서비스를 개선해 나갈 예정입니다.
+        </p>
+    </div>
 </body>
 
 </html>
