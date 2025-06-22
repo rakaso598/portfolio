@@ -115,13 +115,15 @@
 
         /* Hamburger Menu Icon */
         .hamburger {
-            display: none; /* Hidden by default on desktop */
+            display: none;
+            /* Hidden by default on desktop */
             flex-direction: column;
             justify-content: space-around;
             width: 24px;
             height: 20px;
             cursor: pointer;
-            z-index: 1100; /* Above the menu for clicking */
+            z-index: 1100;
+            /* Above the menu for clicking */
         }
 
         .hamburger span {
@@ -358,17 +360,21 @@
             }
 
             .gnb {
-                flex-direction: row; /* Keep logo and hamburger on the same line */
+                flex-direction: row;
+                /* Keep logo and hamburger on the same line */
                 align-items: center;
-                height: 50px; /* Fixed height for mobile GNB */
+                height: 50px;
+                /* Fixed height for mobile GNB */
                 padding: var(--spacing-sm) var(--spacing-lg);
             }
 
             .gnb .menu {
-                display: none; /* Hide menu by default */
+                display: none;
+                /* Hide menu by default */
                 flex-direction: column;
                 position: absolute;
-                top: 50px; /* Position below GNB */
+                top: 50px;
+                /* Position below GNB */
                 left: 0;
                 width: 100%;
                 background-color: var(--color-card-background);
@@ -376,32 +382,35 @@
                 padding: var(--spacing-md) 0;
                 border-top: 1px solid var(--color-border);
                 transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-                transform: translateY(-100%); /* Start off-screen */
+                transform: translateY(-100%);
+                /* Start off-screen */
                 opacity: 0;
-                pointer-events: none; /* Prevent interaction when hidden */
+                pointer-events: none;
+                /* Prevent interaction when hidden */
             }
 
             .gnb .menu.active {
-                display: flex; /* Show menu when active */
-                transform: translateY(0); /* Slide in */
+                display: flex;
+                /* Show menu when active */
+                transform: translateY(0);
+                /* Slide in */
                 opacity: 1;
-                pointer-events: all; /* Allow interaction */
+                pointer-events: all;
+                /* Allow interaction */
             }
 
             .gnb .menu a {
                 padding: var(--spacing-md) var(--spacing-lg);
-                width: 100%;
+                width: 80%;
                 text-align: center;
-                border-bottom: 1px solid var(--color-border); /* Add dividers between menu items */
+                border: 1px solid var(--color-border);
+                /* Add dividers between menu items */
                 box-sizing: border-box;
             }
 
-            .gnb .menu a:last-child {
-                border-bottom: none;
-            }
-
             .hamburger {
-                display: flex; /* Show hamburger icon on mobile */
+                display: flex;
+                /* Show hamburger icon on mobile */
             }
 
             header {
@@ -481,26 +490,83 @@
         <section id="projects">
             <h2 class="section-title">프로젝트</h2>
 
-            <div class="project">
-                <a href="https://rakaso598.github.io/portfolio/study-forest/" rel="noopener noreferrer">
-                    <h3>🌟 팀프로젝트: 공부의 숲</h3>
-                    <p>(클릭하여 이 프로젝트에 대해 더 알아보기)</p>
-                    <p>"공부의 숲" 팀은 습관 형성 및 집중 관리 웹 서비스 개발을 통해
-                        React/Node.js 풀스택 역량을 강화하고, Prisma ORM 기반 데이터베이스 연동 및 Notion을 활용해 협업 효율성을 높였습니다.
+            <!-- ================공부의숲 카드영역=============== -->
+            <a
+                href="https://rexondex.tistory.com/category/%ED%8C%80%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EA%B3%B5%EB%B6%80%EC%9D%98%20%EC%88%B2">
+                <div class="project" rel="noopener noreferrer">
+                    <div>
+                        <h3>🌲 팀프로젝트: 공부의 숲</h3>
+                        <p>많은 사람들이 목표를 설정하고 꾸준한 습관을 만들고 싶어 하지만, 이를 지속하는 것은 쉽지 않습니다. 공부의 숲은 이러한 문제를 해결하기 위해 습관을 형성하고, 집중
+                            시간에 따라 포인트를 지급하는 기능을 제공하는 서비스입니다.
+                        </p>
+                    </div>
+                    <p class="skills">
+                        <span>JavaScript</span>
+                        <span>React</span>
+                        <span>Express</span>
+                        <span>PostgreSQL</span>
+                        <span>Prisma</span>
+                        <span>Axios</span>
+                        <span>Bcrypt</span>
+                        <span>Netlify</span>
+                        <span>Render</span>
+                        <span>GitHub</span>
                     </p>
-                </a>
-                <p class="skills">
-                    <span>JavaScript</span>
-                    <span>React</span>
-                    <span>Express</span>
-                    <span>Axios</span>
-                    <span>PostgreSQL</span>
-                    <span>Prisma ORM</span>
-                    <span>Netlify (Frontend Deploy)</span>
-                    <span>Render (Server Deploy)</span>
-                    <span>Notion (Project Management)</span>
-                </p>
-            </div>
+                </div>
+            </a>
+            <!-- ============================================= -->
+
+            <!-- =================독스루 카드영역================ -->
+            <a
+                href="https://rexondex.tistory.com/category/%ED%8C%80%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EB%8F%85%EC%8A%A4%EB%A3%A8">
+                <div class="project" rel="noopener noreferrer">
+                    <div>
+                        <h3>💬 팀프로젝트: 독스루</h3>
+                        <p>대다수의 개발 시장 콘텐츠가 영어로 작성되어 있어, 영어를 잘하지 못하는 한국인들이 해당 기술을 습득하는데 어려움을 겪고 있습니다. 따라서 개발 관련 영어 문서를 함께
+                            번역하는 챌린지를 진행하고, 번역 작업 에디터에서 번역을 진행하며 번역문에 대한 피드백을 주고 받을 수 있는 서비스를 제작합니다.
+                        </p>
+                    </div>
+                    <p class="skills">
+                        <span>JavaScript</span>
+                        <span>Next.js</span>
+                        <span>Express</span>
+                        <span>PostgreSQL</span>
+                        <span>Prisma</span>
+                        <span>Bcrypt</span>
+                        <span>Vercel</span>
+                        <span>Render</span>
+                        <span>GitHub</span>
+                    </p>
+                </div>
+            </a>
+            <!-- ============================================= -->
+
+            <!-- ==================스낵 카드영역================= -->
+            <a
+                href="https://rexondex.tistory.com/category/%ED%8C%80%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%8A%A4%EB%82%B5">
+                <div class="project" rel="noopener noreferrer">
+                    <div>
+                        <h3>🍪 팀프로젝트: 스낵</h3>
+                        <p>여러 온라인 구매 플랫폼에서 간식을 구입하다 보면, 구매 수량과 총 비용 등을 관리하는 것이 쉽지 않을 때가 있습니다. 이로 인해 총무 업무가 복잡해지고, 관리에
+                            어려움을 겪을 수 있죠!
+                            이 문제를 해결하기 위해, 여러 플랫폼에서 구매한 간식 내역을 한 곳에서 쉽게 관리할 수 있는 원스톱 솔루션을 제공합니다. 이 서비스를 통해 간식 관리를 체계적으로
+                            할 수 있으며, 총무 업무도 훨씬 수월하게 진행할 수 있길 기대합니다.
+                        </p>
+                    </div>
+                    <p class="skills">
+                        <span>JavaScript</span>
+                        <span>Next.js</span>
+                        <span>Express</span>
+                        <span>PostgreSQL</span>
+                        <span>Prisma</span>
+                        <span>Bcrypt</span>
+                        <span>Vercel</span>
+                        <span>AWS</span>
+                    </p>
+                </div>
+            </a>
+            <!-- ============================================= -->
+
         </section>
 
         <section id="skills">
@@ -513,6 +579,7 @@
                 <li>Express</li>
                 <li>React</li>
                 <li>HTML</li>
+                <li>Next.js</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
                 <li>PostgreSQL</li>
@@ -524,6 +591,9 @@
                 <li>Mongoose</li>
                 <li>MongoDB</li>
                 <li>Netlify</li>
+                <li>Neon</li>
+                <li>Git</li>
+                <li>AWS</li>
             </ul>
         </section>
 
@@ -533,8 +603,8 @@
                 <p><strong>이메일:</strong> <a href="mailto:namul9416@gmail.com">namul9416@gmail.com</a></p>
                 <p><strong>GitHub:</strong> <a href="https://github.com/rakaso598"
                         rel="noopener noreferrer">github.com/rakaso598</a></p>
-                <p><strong>Blog:</strong> <a href="https://rexondex.tistory.com/"
-                        rel="noopener noreferrer">rexondex's blog</a>
+                <p><strong>Blog:</strong> <a href="https://rexondex.tistory.com/" rel="noopener noreferrer">rexondex's
+                        blog</a>
                 </p>
             </div>
         </section>
